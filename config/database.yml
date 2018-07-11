@@ -2,17 +2,18 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: postgres
-  user: postgres
- 
+  host: localhost
+  username: postgres
+  password: bemol100
+
 development:
   <<: *default
   database: angular_rails_development
- 
+
 test:
   <<: *default
   database: angular_rails_test
- 
+
 production:
   <<: *default
   database: angular_rails_production
